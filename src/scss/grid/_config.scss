@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: $global-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include breakpoint('medium up') {
+    background-color: blue;
+  };
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &.justify-right {
+    justify-content: flex-end;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-around {
+    justify-content: space-around;
+  }
+
+  &.align-top {
+    align-items: flex-start;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.align-bottom {
+    align-items: flex-end;
+  }
+  &.align-stretch {
+    align-items: stretch;
+  }
+
+}
+
+
+.columns {
+  @include clearfix;
+  height: 80px;
+  margin-right: $grid-column-gutter;
+  margin-left: $grid-column-gutter;
+  background: rgba(0, 0, 255, 0.25);
+}
+
+@for $i from 1 through $grid-column-count {
+  @media #{$bp-large} {
+    .large-#{$i} {
+      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+    }
+  }
+  @media #{$bp-medium} {
+    .medium-#{$i} {
+      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+    }
+  }
+  @media #{$bp-small} {
+    .small-#{$i} {
+      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+    }
+  }
+}

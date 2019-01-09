@@ -1,0 +1,11 @@
+$grid-column-count: 12;
+$global-width: px-to-rem( 1600 );
+$grid-column-gutters: px-to-rem( 20 );
+$grid-column-gutter: px-to-rem( 5 );
+
+$bp-small: (min-width: px-to-rem(320px) ) and (max-width: px-to-rem(640px) );
+$bp-medium: (min-width: px-to-rem(640px) ) and (max-width: px-to-rem(1024px) );
+$bp-large: (min-width: px-to-rem(1024px) );
+
+
+$col-base: 100% / $grid-column-count;
