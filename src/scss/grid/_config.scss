@@ -71,20 +71,24 @@ html {
 }
 
 @for $i from 1 through $grid-column-count {
-  @media screen and #{$bp-large} {
-    .large-#{$i} {
+  @media screen and #{$bp-small} {
+    .small-#{$i} {
       flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
       max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
     }
   }
+}
+@for $i from 1 through $grid-column-count {
   @media screen and #{$bp-medium} {
     .medium-#{$i} {
       flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
       max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
     }
   }
-  @media screen and #{$bp-small} {
-    .small-#{$i} {
+}
+@for $i from 1 through $grid-column-count {
+  @media screen and #{$bp-large} {
+    .large-#{$i} {
       flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
       max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
     }
