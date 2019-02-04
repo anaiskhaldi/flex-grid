@@ -10,8 +10,8 @@ $xlarge: px-to-rem(1200px);
 $xxlarge: px-to-rem(1440px);
 
 $bp-small: (max-width: $small);
-$bp-medium: (min-width: $medium );
-$bp-large: (min-width: $large );
+$bp-medium: (min-width: $medium);
+$bp-large: (min-width: $large);
 
 
 $col-base: 100% / $grid-column-count;

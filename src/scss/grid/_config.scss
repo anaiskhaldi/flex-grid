@@ -96,17 +96,17 @@ html {
 }
 
 .hide-for-small {
-  @media screen and #{$bp-small} {
+  @media screen and (min-width: #{$small}) and (max-width: #{$medium}) {
     display: none;
   }
 }
 .hide-for-medium {
-  @media screen and #{$bp-medium} {
+  @media screen and (min-width: #{$medium}) and (max-width: #{$large}) {
     display: none;
   }
 }
 .hide-for-large {
-  @media screen and #{$bp-large} {
+  @media screen and (min-width: #{$large}) {
     display: none;
   }
 }
