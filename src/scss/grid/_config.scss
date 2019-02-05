@@ -12,6 +12,7 @@ html {
   max-width: $global-width;
   margin-right: auto;
   margin-left: auto;
+
 }
 .container-fluid {
   width: 100%;
@@ -111,17 +112,17 @@ html {
   }
 }
 .show-for-small {
-  @media screen and #{$bp-small} {
+  @media screen and (min-width: #{$small}) and (max-width: #{$medium}) {
     display: inherit;
   }
 }
 .show-for-medium {
-  @media screen and #{$bp-medium} {
+  @media screen and (min-width: #{$medium}) and (max-width: #{$large}) {
     display: inherit;
   }
 }
 .show-for-large {
-  @media screen and #{$bp-large} {
+  @media screen and (min-width: #{$large}) {
     display: inherit;
   }
 }

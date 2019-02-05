@@ -9,6 +9,16 @@ $large: px-to-rem(1024px);
 $xlarge: px-to-rem(1200px);
 $xxlarge: px-to-rem(1440px);
 
+$breakpoints: (
+    small: $small,
+    medium: $medium,
+    large: $large,
+    xlarge: $xlarge,
+    xxlarge: $xxlarge
+);
+
+
+
 $bp-small: (max-width: $small);
 $bp-medium: (min-width: $medium);
 $bp-large: (min-width: $large);

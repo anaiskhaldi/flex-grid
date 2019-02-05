@@ -5,7 +5,7 @@
  * @return string                 size units rem
  */
 @function px-to-rem( $value ){
-    @return getEmValue( $value ) * 1rem;
+  @return getEmValue( $value ) * 1rem;
 }
 
 /**
@@ -15,7 +15,7 @@
  * @return string                   return unit px
  */
 @function getEmValue( $value ){
-    @return setUnit( $value ) / 16px;
+  @return setUnit( $value ) / 16px;
 }
 
 /**
@@ -25,5 +25,11 @@
  * @return string                   return unit px
  */
 @function setUnit( $value ){
-    @return if( unitless( $value ), $value * 1px, $value );
+  @return if( unitless( $value ), $value * 1px, $value );
+}
+
+
+@function is-relative-length($value) {
+  @return is-number($value)
+  and index('em' 'ex' 'ch' 'rem' 'vw' 'vh' 'vmin' 'vmax' 'px', $value) != null;
 }
