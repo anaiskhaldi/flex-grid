@@ -19,8 +19,11 @@ $ npm run build
 
 ## Grid
 Utilisation des classes de la grille
+```shell
 <div class="row--class1--class2">
     <div class="columns small-x medium-x large-x">
+```
+Exemple
 ```shell
 <div class="row--justify-center--align-stretch">
     <div class="columns small-12 medium-6 large-4">
