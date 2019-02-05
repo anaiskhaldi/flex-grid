@@ -18,7 +18,7 @@ $ npm run build
 ```
 
 ## Grid
-Utilisation des classes de la grille
+## Utilisation des classes de la grille
 ```shell
 <div class="row--class1--class2">
     <div class="columns small-x medium-x large-x">
@@ -29,7 +29,7 @@ Exemple
     <div class="columns small-12 medium-6 large-4">
 ```
 
-Utilisation des breakpoints
+## Utilisation des breakpoints
 @mixin breakpoint($size, $direction) {}
 ```shell
 @include breakpoint(large, down) {
