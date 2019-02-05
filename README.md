@@ -18,6 +18,14 @@ $ npm run build
 ```
 
 ## Grid
+<div class="row--class1--class2">
+    <div class="columns small-x medium-x large-x">
+Utilisation des classes de la grille
+```shell
+<div class="row--justify-center--align-stretch">
+    <div class="columns small-12 medium-6 large-4">
+```
+
 Utilisation des breakpoints
 @mixin breakpoint($size, $direction) {}
 ```shell
