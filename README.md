@@ -35,8 +35,11 @@ npm run build
 Le grille fonctionne avec des breakpoints qui sont définits dans le fichier variable.scss. De base, on propose trois breakpoints : small, medium et large.
 
 La grille se compose de :
+
 => container : fixe la largeur globale de la grille
+
 => row : fixe la structure de base de la row
+
 => column/columns // small-X medium-X large-X : fixe la taille du contenu en fonction des breakpoints.
 
 Classe possible pour la row :
@@ -93,4 +96,4 @@ Exemple :
 
 => Pour reproduire un equalizer, on peut utiliser la fonction '--align-stretch' qui va permettre à tous les enfants directs de la row d'avoir la même hauteur.
 
-=> Pas besoin de renseigner tous les breakpoints en HTML, par exemple si on veut que en small et en medium un colonne soit à 12 il suffit de mettre : '<div class="small-12 large-6 column">'.
+=> Pas besoin de renseigner tous les breakpoints en HTML, par exemple si on veut que en small et en medium un colonne soit à 12 il suffit de mettre : <div class="small-12 large-6 column">.
