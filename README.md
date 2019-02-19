@@ -96,4 +96,4 @@ Exemple :
 
 => Pour reproduire un equalizer, on peut utiliser la fonction '--align-stretch' qui va permettre à tous les enfants directs de la row d'avoir la même hauteur.
 
-=> Pas besoin de renseigner tous les breakpoints en HTML, par exemple si on veut que en small et en medium un colonne soit à 12 il suffit de mettre : <div class="small-12 large-6 column">.
+=> Pas besoin de renseigner tous les breakpoints en HTML, par exemple si on veut que en small et en medium un colonne soit à 12 il suffit de mettre : class="small-12 large-6 column".
