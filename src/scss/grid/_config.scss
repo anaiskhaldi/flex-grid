@@ -8,11 +8,14 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: $global-width;
   margin-right: auto;
   margin-left: auto;
-
 }
 .container-fluid {
   width: 100%;
@@ -22,6 +25,7 @@ html {
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 [class*="--row-reverse"] {
@@ -50,6 +54,9 @@ html {
 [class*="--justify-around"] {
   justify-content: space-around;
 }
+[class*="--justify-between"] {
+  justify-content: space-between;
+}
 
 [class*="--align-start"] {
   align-items: flex-start;
@@ -64,11 +71,11 @@ html {
   align-items: stretch;
 }
 
-.columns {
+.columns, .column {
   @include clearfix;
   margin-right: $grid-column-gutter;
   margin-left: $grid-column-gutter;
-  background: rgba(0, 0, 255, 0.25);
+  width: 100%;
 }
 
 @for $i from 1 through $grid-column-count {
@@ -97,12 +104,12 @@ html {
 }
 
 .hide-for-small {
-  @media screen and (min-width: #{$small}) and (max-width: #{$medium}) {
+  @media screen and (max-width: #{$medium}) {
     display: none;
   }
 }
 .hide-for-medium {
-  @media screen and (min-width: #{$medium}) and (max-width: #{$large}) {
+  @media screen and (max-width: #{$large}) {
     display: none;
   }
 }
@@ -112,12 +119,12 @@ html {
   }
 }
 .show-for-small {
-  @media screen and (min-width: #{$small}) and (max-width: #{$medium}) {
+  @media screen and (max-width: #{$medium}) {
     display: inherit;
   }
 }
 .show-for-medium {
-  @media screen and (min-width: #{$medium}) and (max-width: #{$large}) {
+  @media screen and (max-width: #{$large}) {
     display: inherit;
   }
 }
