@@ -54,7 +54,7 @@ Classe possible pour la row :
 --justify-between
 => justification horizontal de la row
 
---align-star
+--align-start
 --align-center
 --align-end
 --align-stretch
