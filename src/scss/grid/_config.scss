@@ -69,10 +69,12 @@ html {
 }
 
 .columns, .column {
+
   @include clearfix;
   margin-right: $grid-column-gutter;
   margin-left: $grid-column-gutter;
   width: 100%;
+  
 }
 
 @for $i from 1 through $grid-column-count {
@@ -94,6 +96,15 @@ html {
 @for $i from 1 through $grid-column-count {
   @media screen and #{$bp-large} {
     .large-#{$i} {
+      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
+    }
+  }
+}
+
+@for $i from 1 through $grid-column-count {
+  @media screen and #{$bp-xlarge} {
+    .xlarge-#{$i} {
       flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
       max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
     }

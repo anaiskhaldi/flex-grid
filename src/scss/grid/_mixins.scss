@@ -11,6 +11,8 @@
 */
 @mixin breakpoint($size, $direction) {
   @if $size == 'small' and $direction == 'only' {
+    @media (min-width: 0) and (max-width: #{$small - 1}) { @content; }
+  } @else if $size == 'medium' and $direction == 'only' {
     @media (min-width: #{$small}) and (max-width: #{$medium - 1}) { @content; }
   } @else if $size == 'large' and $direction == 'only' {
     @media (min-width: #{$medium}) and (max-width: #{$large - 1}) { @content; }
