@@ -1,13 +1,13 @@
 $grid-column-count: 12;
-$global-width: px-to-rem( 1600 );
-$grid-column-gutters: px-to-rem( 20 );
-$grid-column-gutter: px-to-rem( 5 );
+$global-width: 120rem;
+$grid-column-gutters: 2rem;
+$grid-column-gutter: 2rem;
 
-$small: px-to-rem(380px);
-$medium: px-to-rem(640px);
-$large: px-to-rem(1024px);
-$xlarge: px-to-rem(1200px);
-$xxlarge: px-to-rem(1440px);
+$small: 38rem;
+$medium: 64rem;
+$large: 102.4rem;
+$xlarge: 120rem;
+$xxlarge: 144rem;
 
 $breakpoints: (
     small: $small,
@@ -16,8 +16,6 @@ $breakpoints: (
     xlarge: $xlarge,
     xxlarge: $xxlarge
 );
-
-
 
 $bp-small: (max-width: $small);
 $bp-medium: (min-width: $medium);
