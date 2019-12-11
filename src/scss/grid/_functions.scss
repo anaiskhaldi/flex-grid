@@ -4,8 +4,12 @@
  * @param  int     $value         size units px whithout "px"
  * @return string                 size units rem
  */
-@function px-to-rem( $value ){
+ @function px-to-rem( $value ){
   @return getEmValue( $value ) * 1rem;
+}
+
+@function pix-to-rem( $value ){
+  @return (setUnit( $value ) / 16px) * 1rem;
 }
 
 /**
@@ -15,7 +19,7 @@
  * @return string                   return unit px
  */
 @function getEmValue( $value ){
-  @return setUnit( $value ) / 16px;
+  @return setUnit( $value ) / 10px;
 }
 
 /**

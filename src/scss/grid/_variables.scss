@@ -1,26 +1,20 @@
 $grid-column-count: 12;
-$global-width: 120rem;
-$grid-column-gutters: 2rem;
-$grid-column-gutter: 2rem;
+$global-width: px-to-rem(1300);
+$grid-column-gutters: 1rem;
+$grid-column-gutter: 1rem;
 
-$small: 38rem;
-$medium: 64rem;
-$large: 102.4rem;
-$xlarge: 120rem;
-$xxlarge: 144rem;
+$small: 0; // 576px
+$medium: pix-to-rem( 640 );
+$large: pix-to-rem( 1024 );
+$xlarge: pix-to-rem( 1200 );
+$xxlarge: pix-to-rem( 1440 );
 
-$breakpoints: (
-    small: $small,
-    medium: $medium,
-    large: $large,
-    xlarge: $xlarge,
-    xxlarge: $xxlarge
+$breakpoints: ( 
+    'small': 0,
+    'medium': $medium, 
+    'large': $large,
+    'xlarge': $xlarge,
+    'xxlarge': $xxlarge
 );
-
-$bp-small: (max-width: $small);
-$bp-medium: (min-width: $medium);
-$bp-large: (min-width: $large);
-$bp-xlarge: (min-width: $xlarge);
-
 
 $col-base: 100% / $grid-column-count;

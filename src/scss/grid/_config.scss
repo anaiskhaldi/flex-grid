@@ -1,22 +1,25 @@
-html {
-  box-sizing: border-box;
-}
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-
+/*
+** CONTAINER 
+*/
 .container {
   max-width: $global-width;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
+  padding: 0 1rem; 
 }
-.container-fluid {
-  width: 100%;
+.container--fluid {
+  max-width: 100%;
+  margin: 0; 
 }
+
+/*
+** ROW 
+*/
 [class^="row"] {
   display: flex;
   flex: 0 1 auto;
@@ -25,119 +28,47 @@ html {
   width: 100%;
 }
 
-[class*="--row-reverse"] {
-  flex-direction: row-reverse;
-}
-[class*="--column"] {
-  flex-direction: column;
-}
-[class*="--column-reverse"] {
-  flex-direction: column-reverse;
-}
+/*
+** Flex Direction
+*/
+@include direction(row-reverse);
+@include direction(column);
+@include direction(column-reverse);
 
-[class*="--nowrap"] {
-  flex-wrap: nowrap;
-}
+/*
+** Wrap
+*/
+@include wrap(nowrap);
+@include wrap(wrap);
 
-[class*="--justify-start"] {
-  justify-content: flex-start;
-}
-[class*="--justify-end"] {
-  justify-content: flex-end;
-}
-[class*="--justify-center"] {
-  justify-content: center;
-}
-[class*="--justify-around"] {
-  justify-content: space-around;
-}
-[class*="--justify-between"] {
-  justify-content: space-between;
-}
+/*
+** Flex Justify Content
+*/
+@include justify(start);
+@include justify(end);
+@include justify(center);
+@include justify(around);
+@include justify(between);
 
-[class*="--align-start"] {
-  align-items: flex-start;
-}
-[class*="--align-center"] {
-  align-items: center;
-}
-[class*="--align-end"] {
-  align-items: flex-end;
-}
-[class*="--align-stretch"] {
-  align-items: stretch;
-}
+/*
+** Flex Align Content
+*/
+@include align(start);
+@include align(end);
+@include align(center);
+@include align(stretch);
 
-.columns, .column {
-
+/*
+** COLUMNS 
+*/
+.columns, 
+.column {
   @include clearfix;
-  margin-right: $grid-column-gutter;
-  margin-left: $grid-column-gutter;
   width: 100%;
-  
 }
 
-@for $i from 1 through $grid-column-count {
-  @media screen and #{$bp-small} {
-    .small-#{$i} {
-      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-    }
-  }
-}
-@for $i from 1 through $grid-column-count {
-  @media screen and #{$bp-medium} {
-    .medium-#{$i} {
-      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-    }
-  }
-}
-@for $i from 1 through $grid-column-count {
-  @media screen and #{$bp-large} {
-    .large-#{$i} {
-      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-    }
-  }
-}
-
-@for $i from 1 through $grid-column-count {
-  @media screen and #{$bp-xlarge} {
-    .xlarge-#{$i} {
-      flex-basis: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-      max-width: calc((#{$col-base} * #{$i}) - #{$grid-column-gutters});
-    }
-  }
-}
-
-.hide-for-small {
-  @media screen and (min-width: #{$medium}) {
-    display: none;
-  }
-}
-.hide-for-medium {
-  @media screen and (min-width: #{$large}) {
-    display: none;
-  }
-}
-.hide-for-large {
-  @media screen and (min-width: #{$large}) {
-    display: none;
-  }
-}
-.show-for-small {
-  @media screen and (max-width: #{$medium}) {
-    display: inherit;
-  }
-}
-.show-for-medium {
-  @media screen and (max-width: #{$large}) {
-    display: inherit;
-  }
-}
-.show-for-large {
-  @media screen and (min-width: #{$large}) {
-    display: inherit;
-  }
+@each $modifier, $breakpoint in $breakpoints {
+  @include create-columns-class($modifier, $grid-column-count, $col-base, $breakpoint);
+  @include create-hidden-class($modifier, $breakpoint);
+  @include create-column-center($modifier, $breakpoint);
 }
