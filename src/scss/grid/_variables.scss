@@ -4,10 +4,10 @@ $grid-column-gutters: 1rem;
 $grid-column-gutter: 1rem;
 
 $small: 0; // 576px
-$medium: pix-to-rem( 640 );
-$large: pix-to-rem( 1024 );
-$xlarge: pix-to-rem( 1200 );
-$xxlarge: pix-to-rem( 1440 );
+$medium: 640px;
+$large: 1070px;
+$xlarge: 1280px;
+$xxlarge: 1440px;
 
 $breakpoints: ( 
     'small': 0,

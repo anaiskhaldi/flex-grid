@@ -1,3 +1,8 @@
+html,
+* {
+  box-sizing: border-box;
+}
+
 *,
 *:before,
 *:after {
@@ -12,6 +17,7 @@
   margin: 0 auto;
   padding: 0 1rem; 
 }
+
 .container--fluid {
   max-width: 100%;
   margin: 0; 
@@ -57,14 +63,15 @@
 @include align(end);
 @include align(center);
 @include align(stretch);
+@include align(baseline);
 
 /*
 ** COLUMNS 
 */
 .columns, 
 .column {
-  @include clearfix;
   width: 100%;
+  @include clearfix();
 }
 
 @each $modifier, $breakpoint in $breakpoints {
