@@ -1,4 +1,4 @@
-# 36pixels CSS grid
+# CSS grid
 
 Grille CSS utilisant le display flex.
 
@@ -32,7 +32,7 @@ npm run build
 
 ### Les classes
 
-Le grille fonctionne avec des breakpoints qui sont définits dans le fichier variable.scss. De base, on propose trois breakpoints : small, medium et large.
+Le grille fonctionne avec des breakpoints qui sont définis dans le fichier variable.scss.
 
 La grille se compose de :
 
@@ -58,6 +58,7 @@ Classe possible pour la row :
 --align-center
 --align-end
 --align-stretch
+--align-baseline
 => justification verticale de la row
 
 .hide-for-small
@@ -66,7 +67,7 @@ Classe possible pour la row :
 .show-for-small
 .show-for-medium
 .show-for-large
-=> Afficher ou cacher certains éléments pour certains breakpoints
+=> Afficher ou cacher pour certains breakpoints
 ```
 
 Exemple basique de structure de grille :
@@ -96,4 +97,4 @@ Exemple :
 
 => Pour reproduire un equalizer, on peut utiliser la fonction '--align-stretch' qui va permettre à tous les enfants directs de la row d'avoir la même hauteur.
 
-=> Pas besoin de renseigner tous les breakpoints en HTML, par exemple si on veut que en small et en medium un colonne soit à 12 il suffit de mettre : class="small-12 large-6 column".
+=> Pas besoin de renseigner tous les breakpoints en HTML, par exemple si on veut que en small et en medium une colonne soit à 12 il suffit de mettre : class="small-12 large-6 column".
